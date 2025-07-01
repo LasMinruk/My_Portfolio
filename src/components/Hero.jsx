@@ -91,7 +91,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center sm:items-center gap-8 sm:gap-8 gap-4 w-full">
           <div className="flex-1 w-full flex flex-col items-center sm:items-start text-center sm:text-left px-2 sm:px-0">
             <h1 className={`${styles.heroHeadText} text-white text-2xl xs:text-3xl sm:text-5xl lg:text-6xl`}>
-              Hi, I'm <span className='text-[#915EFF]'>Lasiru Minruk</span>
+              Hi, I'm  <span className='text-[#915EFF]'> Lasiru </span>
             </h1>
             <div className="block sm:hidden w-full flex justify-center mt-4 mb-4">
               <motion.div
