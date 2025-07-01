@@ -50,7 +50,7 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden sm:flex flex-row gap-6 md:gap-10 xl:gap-14'>
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -91,9 +91,9 @@ const Navbar = () => {
                   {navLinks.map((nav) => (
                     <li
                       key={nav.id}
-                      className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                        active === nav.title ? "text-white" : "text-secondary"
-                      }`}
+                      className={`font-poppins font-medium cursor-pointer text-[18px] md:text-[16px] py-2 px-2 rounded-lg w-full ${
+                        active === nav.title ? "text-white bg-[#915EFF]/20" : "text-secondary"
+                      } hover:bg-[#915EFF]/10 transition-colors`}
                       onClick={() => {
                         setToggle(!toggle);
                         setActive(nav.title);

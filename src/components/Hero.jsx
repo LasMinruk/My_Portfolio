@@ -80,27 +80,25 @@ function ChangingText({ className }) {
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full min-h-screen h-auto mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[100px] sm:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-row items-center gap-8 sm:gap-5`}
       >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
+        <div className='flex flex-row sm:flex-col justify-center items-center mt-5 gap-2 sm:gap-0'>
+          <div className='w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#915EFF]' />
+          <div className='w-1 h-32 xs:h-40 sm:h-80 violet-gradient' />
         </div>
-
         <div className="flex flex-col sm:flex-row items-center sm:items-center gap-8 sm:gap-8 gap-4 w-full">
-          <div className="flex-1 w-full flex flex-col items-center sm:items-start text-center sm:text-left">
-            <h1 className={`${styles.heroHeadText} text-white`}>
+          <div className="flex-1 w-full flex flex-col items-center sm:items-start text-center sm:text-left px-2 sm:px-0">
+            <h1 className={`${styles.heroHeadText} text-white text-2xl xs:text-3xl sm:text-5xl lg:text-6xl`}>
               Hi, I'm <span className='text-[#915EFF]'>Lasiru Minruk</span>
             </h1>
-            {/* Profile photo for mobile */}
             <div className="block sm:hidden w-full flex justify-center mt-4 mb-4">
               <motion.div
                 initial={{ scale: 1, y: 0 }}
                 animate={{ scale: [1, 1.08, 1], y: [0, -10, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
-                className="w-40 h-40 rounded-full border-4 border-[#915EFF] shadow-2xl transition-all duration-300 mx-auto flex items-center justify-center bg-white/5"
+                className="w-32 h-32 xs:w-40 xs:h-40 rounded-full border-4 border-[#915EFF] shadow-2xl transition-all duration-300 mx-auto flex items-center justify-center bg-white/5"
               >
                 <img
                   src={yourPhoto}
@@ -109,11 +107,10 @@ const Hero = () => {
                 />
               </motion.div>
             </div>
-            <div className="flex justify-center sm:justify-start w-full mt-10 mb-10">
-               <ChangingText className={`text-white-100 font-bold text-lg xs:text-2xl sm:text-4xl lg:text-5xl break-words text-center sm:text-left w-full`} />
+            <div className="flex justify-center sm:justify-start w-full mt-6 mb-6 sm:mt-10 sm:mb-10">
+               <ChangingText className={`text-white-100 font-bold text-base xs:text-lg sm:text-2xl lg:text-4xl break-words text-center sm:text-left w-full`} />
              </div>
-            {/* Social Links */}
-            <div className="flex flex-row justify-center sm:justify-start items-center gap-6 sm:gap-8 mt-8 mb-10 w-full">
+            <div className="flex flex-row justify-center sm:justify-start items-center gap-4 sm:gap-6 lg:gap-8 mt-6 mb-8 w-full">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
@@ -121,31 +118,30 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={link.label}
-                  className={`text-white hover:scale-110 focus:scale-110 active:scale-95 transition-transform duration-200 flex items-center justify-center ${iconSize}`}
+                  className={`text-white hover:scale-110 focus:scale-110 active:scale-95 transition-transform duration-200 flex items-center justify-center w-12 h-12 xs:w-16 xs:h-16 lg:w-20 lg:h-20`}
                   style={{ fontSize: 0 }}
                 >
-                  {React.cloneElement(link.icon, { className: `${iconSize} ${link.icon.props.className || ''}` })}
+                  {React.cloneElement(link.icon, { className: `w-8 h-8 xs:w-12 xs:h-12 lg:w-16 lg:h-16 ${link.icon.props.className || ''}` })}
                 </a>
               ))}
             </div>
-            {/* Download CV Button */}
-            <div className="flex justify-center sm:justify-start w-full mb-12">
+            <div className="flex justify-center sm:justify-start w-full mb-8 sm:mb-12">
               <a
                 href="/cv.pdf"
-                download
-                className="mt-2 px-8 py-3 rounded-lg border-2 border-[#915EFF] text-[#915EFF] font-semibold bg-transparent hover:bg-[#915EFF] hover:text-white transition-all duration-200 text-base sm:text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#915EFF] focus:ring-opacity-50"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 px-6 py-2 xs:px-8 xs:py-3 rounded-lg border-2 border-[#915EFF] text-[#915EFF] font-semibold bg-transparent hover:bg-[#915EFF] hover:text-white transition-all duration-200 text-sm xs:text-base sm:text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#915EFF] focus:ring-opacity-50"
               >
                 Download CV
               </a>
             </div>
           </div>
-          {/* Profile photo for desktop */}
           <div className="hidden sm:flex flex-col items-center justify-center w-auto">
             <motion.div
               initial={{ scale: 1, y: 0 }}
               animate={{ scale: [1, 1.08, 1], y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' }}
-              className="w-48 h-48 lg:w-56 lg:h-56 max-w-sm rounded-full border-4 border-[#915EFF] shadow-2xl transition-all duration-300 flex items-center justify-center bg-white/5"
+              className="w-40 h-40 lg:w-56 lg:h-56 max-w-sm rounded-full border-4 border-[#915EFF] shadow-2xl transition-all duration-300 flex items-center justify-center bg-white/5"
             >
               <img
                 src={yourPhoto}
