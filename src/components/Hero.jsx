@@ -93,7 +93,7 @@ const Hero = () => {
             <h1 className={`${styles.heroHeadText} text-white text-2xl xs:text-3xl sm:text-5xl lg:text-6xl`}>
               Hi, I'm  <span className='text-[#915EFF]'> Lasiru </span>
             </h1>
-            <div className="block sm:hidden w-full flex justify-center mt-4 mb-4">
+            <div className="block sm:hidden w-full flex justify-center mt-8 mb-4">
               <motion.div
                 initial={{ scale: 1, y: 0 }}
                 animate={{ scale: [1, 1.08, 1], y: [0, -10, 0] }}
@@ -136,7 +136,7 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col items-center justify-center w-auto">
+          <div className="hidden sm:flex flex-col items-center justify-center w-auto mt-12">
             <motion.div
               initial={{ scale: 1, y: 0 }}
               animate={{ scale: [1, 1.08, 1], y: [0, -10, 0] }}

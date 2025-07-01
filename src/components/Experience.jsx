@@ -33,9 +33,9 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
+        <h3 className='text-white text-lg xs:text-xl sm:text-2xl font-bold'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-secondary text-base xs:text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className='text-white-100 text-xs xs:text-sm sm:text-[14px] pl-1 tracking-wider'
           >
             {point}
           </li>
@@ -60,15 +60,15 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
+        <p className={`${styles.sectionSubText} text-center text-base xs:text-lg px-2 sm:px-0`}>
           What I have done so far
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText} text-center text-xl xs:text-3xl sm:text-4xl px-2 sm:px-0`}>
           Education.
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div className='mt-20 flex flex-col px-2 sm:px-0'>
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard

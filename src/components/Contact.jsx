@@ -54,10 +54,10 @@ const Contact = () => {
   };
 
   return (
-    <div className='xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden'>
+    <div className='xl:mt-12 flex flex-col xl:flex-row-reverse gap-8 xl:gap-10 overflow-hidden px-2 sm:px-0'>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-black-100 p-4 xs:p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -65,7 +65,7 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-12 flex flex-col gap-6 xs:gap-8'
         >
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
@@ -74,8 +74,8 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder='What’s your name?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              placeholder="What's your name?"
+              className='bg-tertiary py-3 xs:py-4 px-4 xs:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-sm xs:text-base'
               required
             />
           </label>
@@ -87,7 +87,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder='Enter your email'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-3 xs:py-4 px-4 xs:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-sm xs:text-base'
               required
             />
           </label>
@@ -99,14 +99,14 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='Type your message here...'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-tertiary py-3 xs:py-4 px-4 xs:px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium text-sm xs:text-base'
               required
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-tertiary py-2 xs:py-3 px-6 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary text-sm xs:text-base'
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -115,7 +115,7 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[250px] xs:h-[350px]'
       >
         <EarthCanvas />
       </motion.div>

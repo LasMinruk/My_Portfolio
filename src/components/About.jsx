@@ -9,7 +9,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 // ServiceCard component displays each service with tilt and animation
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt className='xs:w-[250px] w-full max-w-xs mx-auto mb-6 sm:mb-0'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
@@ -50,7 +50,7 @@ const About = () => {
       {/* Overview paragraph about yourself */}
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-base xs:text-[17px] max-w-3xl leading-[28px] xs:leading-[30px] text-center sm:text-left px-2 sm:px-0'
       >
         I am a dedicated software engineering undergraduate with a strong passion for developing innovative software solutions that enhance organizational efficiency and drive success. I possess proven leadership skills, with experience motivating, educating, and managing teams to achieve project goals effectively.
         
@@ -62,7 +62,7 @@ const About = () => {
       </motion.p>
 
       {/* Service cards section */}
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-col sm:flex-row flex-wrap gap-6 sm:gap-10 items-center sm:items-stretch'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
