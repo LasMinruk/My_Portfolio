@@ -54,11 +54,6 @@ const About = () => {
       >
         I am a dedicated software engineering undergraduate with a strong passion for developing innovative software solutions that enhance organizational efficiency and drive success. I possess proven leadership skills, with experience motivating, educating, and managing teams to achieve project goals effectively.
         
-        Known for being hardworking, adaptable, and self-motivated, I approach challenges with enthusiasm and maintain a positive, collaborative attitude. My excellent interpersonal and communication skills enable me to build strong working relationships and collaborate seamlessly with diverse teams.
-        
-        I am committed to continuous learning and applying best practices in software development to deliver impactful results.
-        
-        If you want, I can also help tailor this further to specific roles or industries you are targeting.
       </motion.p>
 
       {/* Service cards section */}
