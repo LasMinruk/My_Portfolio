@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  tripguidee,
 } from "../assets";
 
 export const navLinks = [
@@ -247,6 +248,25 @@ const projects = [
     ],
     image: tripguide,
     source_code_link: "https://www.linkedin.com/feed/update/urn:li:activity:7291209485925171201/",
+  },
+
+  {
+    name: "Coffee Shop Android App",
+    description:
+      "This Figma design showcases a clean, user-friendly coffee ordering app interface. It features a menu with items like Cappuccino (rated ★4.5) and Americano, along with customization options (e.g., oat milk) and pricing. The design highlights a special weekend offer to engage users. The minimalist layout emphasizes readability and intuitive navigation, making it ideal for a portfolio piece demonstrating UI/UX skills in food/beverage apps.",
+    tags: [
+      {
+        name: "figma",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "android",
+        color: "green-text-gradient",
+      },
+    
+    ],
+    image: tripguidee,
+    source_code_link: "https://www.figma.com/design/4qDE2dzPWDJcyw0ln2uokc/Untitled?node-id=0-1&p=f&t=NAef29a5cbf7ttBA-0",
   },
 
   
